@@ -1,3 +1,5 @@
-Run Kafka on Docker
+# PUB SUB with Apache Kafka
 
-Make Postman GET requests for http://localhost:8090/send?message=<message text>
+-Run Kafka on Docker
+
+-Make Postman GET requests for http://localhost:8090/send?message=<message text>

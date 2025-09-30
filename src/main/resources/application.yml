@@ -1,0 +1,13 @@
+server:
+  port: 8090
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092 #bootstrap-servers: Specifies the Kafka broker(s) the application will connect to
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer #key-serializer: Converts the message key into a byte array before sending it to Kafka.
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer #value-serializer: Converts the message value into a byte array before sending it. In this case, both the key and value are serialized as Strings using StringSerializer.
+    consumer:
+      group-id: my-group # group-id: Defines the consumer group name. Kafka uses this to track message consumption. Multiple consumers with the same group ID share the message load.
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer #key-deserializer: Converts the incoming message key (in bytes) back into a String
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer #value-deserializer: Converts the incoming message value (in bytes) back into a String.
